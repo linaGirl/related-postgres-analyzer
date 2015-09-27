@@ -1,0 +1,18 @@
+language: node_js
+
+node_js : 
+    - "0.12"
+    - "iojs"
+    - "v4.1"
+
+
+addons:
+    postgresql: "9.4"
+
+
+before_script:
+  - psql -f test/sql/createdb.sql -U postgres
+  - psql -f test/sql/db.sql -U postgres
+
+
+sudo: false
