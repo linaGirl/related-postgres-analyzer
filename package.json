@@ -22,7 +22,7 @@
         , "async-method"                    : "0.1.x"
     }
     , "devDependencies": {
-          "mocha"                           : "1.17.x"
+          "mocha"                           : "2.x"
         , "related-postgres-connection"     : "*"
         , "test-config"                     : "0.1.x"
     }

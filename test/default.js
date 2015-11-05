@@ -26,7 +26,10 @@
     describe('Setting up the db', function() {
         it('should work', function(done) {
             connection = new DBConnection(config);
+
             connection.once('idle', done)
+
+            connection.connect();
         });
     });
 
@@ -37,7 +40,7 @@
         });
 
         it('should return the dbs definition', function(done) {
-            analyzer.analyze(['related_test_postgres_analyzer']).then(function(definition) {
+            analyzer.analyze(['related_test_postgres_analyzer']).then(function(definition) { log(definition);
                 assert(definition && definition.related_test_postgres_analyzer && definition.related_test_postgres_analyzer.jsonType);
                 done();
             }).catch(done);
