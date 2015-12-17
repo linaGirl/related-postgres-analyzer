@@ -41,7 +41,7 @@
 
         it('should return the dbs definition', function(done) {
             analyzer.analyze(['related_test_postgres_analyzer']).then(function(definition) {
-                assert(definition && definition.related_test_postgres_analyzer && definition.related_test_postgres_analyzer.jsonType);
+                assert(definition && definition.related_test_postgres_analyzer && definition.related_test_postgres_analyzer.jsonType && definition.related_test_postgres_analyzer.getFunctionNames());
                 done();
             }).catch(done);
         });
