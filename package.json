@@ -17,8 +17,9 @@
     }
     , "dependencies": {
           "ee-class"                        : "1.x"
-        , "ee-types"                        : "1.x"
+        , "ee-types"                        : "2.x"
         , "related-query-context"           : "2.x"
+        , "related-db-analyzer"             : "0.x"
         , "ee-log"                          : "0.3.x"
     }
     , "devDependencies": {

@@ -40,8 +40,11 @@
         });
 
         it('should return the dbs definition', function(done) {
-            analyzer.analyze(['related_test_postgres_analyzer']).then(function(definition) {
-                assert(definition && definition.related_test_postgres_analyzer && definition.related_test_postgres_analyzer.jsonType && definition.related_test_postgres_analyzer.getFunctions());
+            analyzer.analyze(['related_test_postgres_analyzer']).then(function(definition) {// log(definition);
+                assert(definition)
+                assert(definition.has('related_test_postgres_analyzer'));
+                assert(definition.get('related_test_postgres_analyzer').entities.has('jsonType'));
+                assert(!definition.get('related_test_postgres_analyzer').functions.has('jsonType'));
                 done();
             }).catch(done);
         });
