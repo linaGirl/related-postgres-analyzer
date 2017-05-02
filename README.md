@@ -1,5 +1,7 @@
 # related-postgres-analyzer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/related-postgres-analyzer.svg)](https://greenkeeper.io/)
+
 Analyzes the currently connected db host for all its dbs, returns an object describing it
 
 
